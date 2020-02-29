@@ -1,0 +1,11 @@
+.star {
+    padding: .5rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.star-rating {
+    display: flex;
+    padding: .5rem;
+}
