@@ -8,14 +8,14 @@ const StarRating = props => {
     
 
     const handleClick = (e) => {
-        console.log("clicking")
-        setRating(parseInt(e.target.name))
+        const name = e.currentTarget.getAttribute("name");
+        setRating(parseInt(name))
     }
 
+
     return (
-      <div className="star-rating" onClick={() => console.log("clicking outer div")}>
-          <h1 onClick={console.log("THANK YOU FOR CLICKING")}>CLICK ME</h1>
-        <Star color={color} name="1" onClick={e => handleClick} starType={currentRating >= 1 ? "full" :"blank"} />
+      <div className="star-rating">
+        <Star color={color} name="1" onClick={handleClick} starType={currentRating >= 1 ? "full" :"blank"} />
         <Star color={color} name="2" onClick={handleClick} starType={currentRating >= 2 ? "full" :"blank"} />
         <Star color={color} name="3" onClick={handleClick} starType={currentRating >= 3 ? "full" :"blank"}/>
         <Star color={color} name="4" onClick={handleClick} starType={currentRating >= 4 ? "full" :"blank"}/>
@@ -30,6 +30,9 @@ const StarRating = props => {
                 <Star color={color} name="10" onClick={handleClick} starType={currentRating >= 10 ? "full" :"blank"}/>
             </div>
         }
+        <span>{currentRating}</span>
+
+        <button onClick={e => console.log("GUGGAGSDF")} />
       </div>
     );
 }

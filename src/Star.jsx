@@ -12,14 +12,15 @@ const Star = props => {
     };
 
     return (    
-        <div className="star" style={{"color": props.color}} onClick={props.onClick}>
+        <div className="star" name={props.name} style={{"color": props.color}} onClick={props.onClick}>
             {STAR_ICONS[props.starType]}
         </div>  
         )
 }
 
 Star.defaultProps = {
-    starType: "blank"
+    starType: "blank",
+    name: "1"
 }
 
 export default Star;
