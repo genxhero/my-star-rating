@@ -5,6 +5,11 @@ import PropTypes from 'prop-types';
 
 const Star = props => {
 
+    Star.propTypes = {
+        name: PropTypes.string,
+        color: PropTypes.string
+    }
+
     const STAR_ICONS = {
       full: <MdStar />,
       half: <MdStarHalf />,

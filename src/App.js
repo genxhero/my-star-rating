@@ -5,7 +5,7 @@ import StarRating from './StarRating';
 function App() {
   return (
     <div className="App">
-        <StarRating color="red" />
+        <StarRating color="blue" starCount={10}/>
     </div>
   );
 }

@@ -1,8 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Star from './Star';
 import PropTypes from 'prop-types'
 
 const StarRating = props => {
+
+    StarRating.propTypes = {
+      starCount: PropTypes.oneOf([5, 10])
+    };
+    
     const {color, starCount} = props;
     const [currentRating, setRating ] = useState(0);
     
@@ -22,7 +27,7 @@ const StarRating = props => {
         <Star color={color} name="5" onClick={handleClick} starType={currentRating >= 5 ? "full" :"blank"}/>
         {
            starCount > 5 && 
-           <div>
+           <div style={{"display":"flex"}}>
                 <Star color={color} name="6" onClick={handleClick} starType={currentRating >= 6 ? "full" :"blank"} />
                 <Star color={color} name="7" onClick={handleClick} starType={currentRating >= 7 ? "full" :"blank"} />
                 <Star color={color} name="8" onClick={handleClick} starType={currentRating >= 8 ? "full" :"blank"}/>
@@ -41,5 +46,7 @@ StarRating.defaultProps = {
     color: "blue",
     starCount: 5
 }
+
+
 
 export default StarRating;
