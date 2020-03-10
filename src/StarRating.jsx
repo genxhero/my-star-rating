@@ -2,6 +2,14 @@ import React, {useState} from 'react';
 import Star from './Star';
 import PropTypes from 'prop-types'
 
+/**
+ * 
+ * s;gklmswg
+ * bmw
+ * 
+ * @param {*} props 
+ */
+
 const StarRating = props => {
 
     StarRating.propTypes = {
